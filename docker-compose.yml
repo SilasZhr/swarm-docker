@@ -1,5 +1,4 @@
 version: "3"
-
 services:
   clef-1:
     image: ethersphere/clef:0.4.7
@@ -56,7 +55,7 @@ services:
     command: full
 
 
- bee-1:
+  bee-1:
     image: ethersphere/bee:0.5.1
     restart: unless-stopped
     environment:
