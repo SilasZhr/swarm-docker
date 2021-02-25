@@ -1,7 +1,6 @@
 version: "3"
 
 services:
-
   clef-1:
     image: ethersphere/clef:0.4.7
     restart: unless-stopped
@@ -47,7 +46,7 @@ services:
       - clef-5:/app/data
     command: full
 
-   clef-6:
+  clef-6:
     image: ethersphere/clef:0.4.7
     restart: unless-stopped
     environment:
