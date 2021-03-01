@@ -956,7 +956,7 @@ services:
       - clef-1
       
  
- bee-21:
+  bee-21:
     image: ethersphere/bee:0.5.1
     restart: unless-stopped
     environment:
@@ -1428,7 +1428,7 @@ services:
       - clef-1
 
 
- bee-31:
+  bee-31:
     image: ethersphere/bee:0.5.1
     restart: unless-stopped
     environment:
