@@ -53,6 +53,133 @@ services:
     volumes:
       - clef-6:/app/data
     command: full
+  
+  clef-7:
+    image: ethersphere/clef:0.4.7
+    restart: unless-stopped
+    environment:
+      - CLEF_CHAINID
+    volumes:
+      - clef-7:/app/data
+    command: full
+  
+  clef-8:
+    image: ethersphere/clef:0.4.7
+    restart: unless-stopped
+    environment:
+      - CLEF_CHAINID
+    volumes:
+      - clef-8:/app/data
+    command: full
+
+  clef-9:
+    image: ethersphere/clef:0.4.7
+    restart: unless-stopped
+    environment:
+      - CLEF_CHAINID
+    volumes:
+      - clef-9:/app/data
+    command: full
+
+  clef-10:
+    image: ethersphere/clef:0.4.7
+    restart: unless-stopped
+    environment:
+      - CLEF_CHAINID
+    volumes:
+      - clef-10:/app/data
+    command: full
+
+  clef-11:
+    image: ethersphere/clef:0.4.7
+    restart: unless-stopped
+    environment:
+      - CLEF_CHAINID
+    volumes:
+      - clef-11:/app/data
+    command: full
+  
+  clef-12:
+    image: ethersphere/clef:0.4.7
+    restart: unless-stopped
+    environment:
+      - CLEF_CHAINID
+    volumes:
+      - clef-12:/app/data
+    command: full
+
+  clef-13:
+    image: ethersphere/clef:0.4.7
+    restart: unless-stopped
+    environment:
+      - CLEF_CHAINID
+    volumes:
+      - clef-13:/app/data
+    command: full
+
+  clef-14:
+    image: ethersphere/clef:0.4.7
+    restart: unless-stopped
+    environment:
+      - CLEF_CHAINID
+    volumes:
+      - clef-14:/app/data
+    command: full
+
+  clef-15:
+    image: ethersphere/clef:0.4.7
+    restart: unless-stopped
+    environment:
+      - CLEF_CHAINID
+    volumes:
+      - clef-15:/app/data
+    command: full
+
+  clef-16:
+    image: ethersphere/clef:0.4.7
+    restart: unless-stopped
+    environment:
+      - CLEF_CHAINID
+    volumes:
+      - clef-16:/app/data
+    command: full
+  
+  clef-17:
+    image: ethersphere/clef:0.4.7
+    restart: unless-stopped
+    environment:
+      - CLEF_CHAINID
+    volumes:
+      - clef-17:/app/data
+    command: full
+  
+  clef-18:
+    image: ethersphere/clef:0.4.7
+    restart: unless-stopped
+    environment:
+      - CLEF_CHAINID
+    volumes:
+      - clef-18:/app/data
+    command: full
+
+  clef-19:
+    image: ethersphere/clef:0.4.7
+    restart: unless-stopped
+    environment:
+      - CLEF_CHAINID
+    volumes:
+      - clef-19:/app/data
+    command: full
+
+  clef-20:
+    image: ethersphere/clef:0.4.7
+    restart: unless-stopped
+    environment:
+      - CLEF_CHAINID
+    volumes:
+      - clef-20:/app/data
+    command: full
+
 
 
   bee-1:
@@ -337,6 +464,669 @@ services:
     command: start
     depends_on:
       - clef-6
+      
+  bee-7:
+    image: ethersphere/bee:0.5.1
+    restart: unless-stopped
+    environment:
+      - BEE_API_ADDR
+      - BEE_BOOTNODE
+      - BEE_CLEF_SIGNER_ENABLE
+      - BEE_CLEF_SIGNER_ENDPOINT=http://clef-2:8550
+      - BEE_CONFIG
+      - BEE_CORS_ALLOWED_ORIGINS
+      - BEE_DATA_DIR
+      - BEE_DB_CAPACITY
+      - BEE_DEBUG_API_ADDR
+      - BEE_DEBUG_API_ENABLE
+      - BEE_GATEWAY_MODE
+      - BEE_GLOBAL_PINNING_ENABLE
+      - BEE_NAT_ADDR
+      - BEE_NETWORK_ID
+      - BEE_P2P_ADDR
+      - BEE_P2P_QUIC_ENABLE
+      - BEE_P2P_WS_ENABLE
+      - BEE_PASSWORD
+      - BEE_PASSWORD_FILE
+      - BEE_PAYMENT_EARLY
+      - BEE_PAYMENT_THRESHOLD
+      - BEE_PAYMENT_TOLERANCE
+      - BEE_RESOLVER_OPTIONS
+      - BEE_STANDALONE
+      - BEE_SWAP_ENABLE
+      - BEE_SWAP_ENDPOINT
+      - BEE_SWAP_FACTORY_ADDRESS
+      - BEE_SWAP_INITIAL_DEPOSIT
+      - BEE_TRACING_ENABLE
+      - BEE_TRACING_ENDPOINT
+      - BEE_TRACING_SERVICE_NAME
+      - BEE_VERBOSITY
+      - BEE_WELCOME_MESSAGE
+    ports:
+      - "7633:1633"
+      - "7634:1634"
+      - "127.0.0.1:7635:1635"
+    volumes:
+      - bee-7:/home/bee/.bee
+    command: start
+    depends_on:
+      - clef-7
+
+  bee-8:
+    image: ethersphere/bee:0.5.1
+    restart: unless-stopped
+    environment:
+      - BEE_API_ADDR
+      - BEE_BOOTNODE
+      - BEE_CLEF_SIGNER_ENABLE
+      - BEE_CLEF_SIGNER_ENDPOINT=http://clef-3:8550
+      - BEE_CONFIG
+      - BEE_CORS_ALLOWED_ORIGINS
+      - BEE_DATA_DIR
+      - BEE_DB_CAPACITY
+      - BEE_DEBUG_API_ADDR
+      - BEE_DEBUG_API_ENABLE
+      - BEE_GATEWAY_MODE
+      - BEE_GLOBAL_PINNING_ENABLE
+      - BEE_NAT_ADDR
+      - BEE_NETWORK_ID
+      - BEE_P2P_ADDR
+      - BEE_P2P_QUIC_ENABLE
+      - BEE_P2P_WS_ENABLE
+      - BEE_PASSWORD
+      - BEE_PASSWORD_FILE
+      - BEE_PAYMENT_EARLY
+      - BEE_PAYMENT_THRESHOLD
+      - BEE_PAYMENT_TOLERANCE
+      - BEE_RESOLVER_OPTIONS
+      - BEE_STANDALONE
+      - BEE_SWAP_ENABLE
+      - BEE_SWAP_ENDPOINT
+      - BEE_SWAP_FACTORY_ADDRESS
+      - BEE_SWAP_INITIAL_DEPOSIT
+      - BEE_TRACING_ENABLE
+      - BEE_TRACING_ENDPOINT
+      - BEE_TRACING_SERVICE_NAME
+      - BEE_VERBOSITY
+      - BEE_WELCOME_MESSAGE
+    ports:
+      - "8633:1633"
+      - "8634:1634"
+      - "127.0.0.1:8635:1635"
+    volumes:
+      - bee-8:/home/bee/.bee
+    command: start
+    depends_on:
+      - clef-8
+
+  bee-9:
+    image: ethersphere/bee:0.5.1
+    restart: unless-stopped
+    environment:
+      - BEE_API_ADDR
+      - BEE_BOOTNODE
+      - BEE_CLEF_SIGNER_ENABLE
+      - BEE_CLEF_SIGNER_ENDPOINT=http://clef-4:8550
+      - BEE_CONFIG
+      - BEE_CORS_ALLOWED_ORIGINS
+      - BEE_DATA_DIR
+      - BEE_DB_CAPACITY
+      - BEE_DEBUG_API_ADDR
+      - BEE_DEBUG_API_ENABLE
+      - BEE_GATEWAY_MODE
+      - BEE_GLOBAL_PINNING_ENABLE
+      - BEE_NAT_ADDR
+      - BEE_NETWORK_ID
+      - BEE_P2P_ADDR
+      - BEE_P2P_QUIC_ENABLE
+      - BEE_P2P_WS_ENABLE
+      - BEE_PASSWORD
+      - BEE_PASSWORD_FILE
+      - BEE_PAYMENT_EARLY
+      - BEE_PAYMENT_THRESHOLD
+      - BEE_PAYMENT_TOLERANCE
+      - BEE_RESOLVER_OPTIONS
+      - BEE_STANDALONE
+      - BEE_SWAP_ENABLE
+      - BEE_SWAP_ENDPOINT
+      - BEE_SWAP_FACTORY_ADDRESS
+      - BEE_SWAP_INITIAL_DEPOSIT
+      - BEE_TRACING_ENABLE
+      - BEE_TRACING_ENDPOINT
+      - BEE_TRACING_SERVICE_NAME
+      - BEE_VERBOSITY
+      - BEE_WELCOME_MESSAGE
+    ports:
+      - "9633:1633"
+      - "9634:1634"
+      - "127.0.0.1:9635:1635"
+    volumes:
+      - bee-9:/home/bee/.bee
+    command: start
+    depends_on:
+      - clef-9
+
+  bee-10:
+    image: ethersphere/bee:0.5.1
+    restart: unless-stopped
+    environment:
+      - BEE_API_ADDR
+      - BEE_BOOTNODE
+      - BEE_CLEF_SIGNER_ENABLE
+      - BEE_CLEF_SIGNER_ENDPOINT=http://clef-5:8550
+      - BEE_CONFIG
+      - BEE_CORS_ALLOWED_ORIGINS
+      - BEE_DATA_DIR
+      - BEE_DB_CAPACITY
+      - BEE_DEBUG_API_ADDR
+      - BEE_DEBUG_API_ENABLE
+      - BEE_GATEWAY_MODE
+      - BEE_GLOBAL_PINNING_ENABLE
+      - BEE_NAT_ADDR
+      - BEE_NETWORK_ID
+      - BEE_P2P_ADDR
+      - BEE_P2P_QUIC_ENABLE
+      - BEE_P2P_WS_ENABLE
+      - BEE_PASSWORD
+      - BEE_PASSWORD_FILE
+      - BEE_PAYMENT_EARLY
+      - BEE_PAYMENT_THRESHOLD
+      - BEE_PAYMENT_TOLERANCE
+      - BEE_RESOLVER_OPTIONS
+      - BEE_STANDALONE
+      - BEE_SWAP_ENABLE
+      - BEE_SWAP_ENDPOINT
+      - BEE_SWAP_FACTORY_ADDRESS
+      - BEE_SWAP_INITIAL_DEPOSIT
+      - BEE_TRACING_ENABLE
+      - BEE_TRACING_ENDPOINT
+      - BEE_TRACING_SERVICE_NAME
+      - BEE_VERBOSITY
+      - BEE_WELCOME_MESSAGE
+    ports:
+      - "10633:1633"
+      - "10634:1634"
+      - "127.0.0.1:10635:1635"
+    volumes:
+      - bee-10:/home/bee/.bee
+    command: start
+    depends_on:
+      - clef-10
+
+  bee-11:
+    image: ethersphere/bee:0.5.1
+    restart: unless-stopped
+    environment:
+      - BEE_API_ADDR
+      - BEE_BOOTNODE
+      - BEE_CLEF_SIGNER_ENABLE
+      - BEE_CLEF_SIGNER_ENDPOINT=http://clef-1:8550
+      - BEE_CONFIG
+      - BEE_CORS_ALLOWED_ORIGINS
+      - BEE_DATA_DIR
+      - BEE_DB_CAPACITY
+      - BEE_DEBUG_API_ADDR
+      - BEE_DEBUG_API_ENABLE
+      - BEE_GATEWAY_MODE
+      - BEE_GLOBAL_PINNING_ENABLE
+      - BEE_NAT_ADDR
+      - BEE_NETWORK_ID
+      - BEE_P2P_ADDR
+      - BEE_P2P_QUIC_ENABLE
+      - BEE_P2P_WS_ENABLE
+      - BEE_PASSWORD
+      - BEE_PASSWORD_FILE
+      - BEE_PAYMENT_EARLY
+      - BEE_PAYMENT_THRESHOLD
+      - BEE_PAYMENT_TOLERANCE
+      - BEE_RESOLVER_OPTIONS
+      - BEE_STANDALONE
+      - BEE_SWAP_ENABLE
+      - BEE_SWAP_ENDPOINT
+      - BEE_SWAP_FACTORY_ADDRESS
+      - BEE_SWAP_INITIAL_DEPOSIT
+      - BEE_TRACING_ENABLE
+      - BEE_TRACING_ENDPOINT
+      - BEE_TRACING_SERVICE_NAME
+      - BEE_VERBOSITY
+      - BEE_WELCOME_MESSAGE
+    ports:
+      - "11633:1633"
+      - "11634:1634"
+      - "127.0.0.1:11635:1635"
+    volumes:
+      - bee-11:/home/bee/.bee
+    command: start
+    depends_on:
+      - clef-11
+  
+
+  bee-12:
+    image: ethersphere/bee:0.5.1
+    restart: unless-stopped
+    environment:
+      - BEE_API_ADDR
+      - BEE_BOOTNODE
+      - BEE_CLEF_SIGNER_ENABLE
+      - BEE_CLEF_SIGNER_ENDPOINT=http://clef-2:8550
+      - BEE_CONFIG
+      - BEE_CORS_ALLOWED_ORIGINS
+      - BEE_DATA_DIR
+      - BEE_DB_CAPACITY
+      - BEE_DEBUG_API_ADDR
+      - BEE_DEBUG_API_ENABLE
+      - BEE_GATEWAY_MODE
+      - BEE_GLOBAL_PINNING_ENABLE
+      - BEE_NAT_ADDR
+      - BEE_NETWORK_ID
+      - BEE_P2P_ADDR
+      - BEE_P2P_QUIC_ENABLE
+      - BEE_P2P_WS_ENABLE
+      - BEE_PASSWORD
+      - BEE_PASSWORD_FILE
+      - BEE_PAYMENT_EARLY
+      - BEE_PAYMENT_THRESHOLD
+      - BEE_PAYMENT_TOLERANCE
+      - BEE_RESOLVER_OPTIONS
+      - BEE_STANDALONE
+      - BEE_SWAP_ENABLE
+      - BEE_SWAP_ENDPOINT
+      - BEE_SWAP_FACTORY_ADDRESS
+      - BEE_SWAP_INITIAL_DEPOSIT
+      - BEE_TRACING_ENABLE
+      - BEE_TRACING_ENDPOINT
+      - BEE_TRACING_SERVICE_NAME
+      - BEE_VERBOSITY
+      - BEE_WELCOME_MESSAGE
+    ports:
+      - "12633:1633"
+      - "12634:1634"
+      - "127.0.0.1:12635:1635"
+    volumes:
+      - bee-12:/home/bee/.bee
+    command: start
+    depends_on:
+      - clef-12
+
+  bee-13:
+    image: ethersphere/bee:0.5.1
+    restart: unless-stopped
+    environment:
+      - BEE_API_ADDR
+      - BEE_BOOTNODE
+      - BEE_CLEF_SIGNER_ENABLE
+      - BEE_CLEF_SIGNER_ENDPOINT=http://clef-3:8550
+      - BEE_CONFIG
+      - BEE_CORS_ALLOWED_ORIGINS
+      - BEE_DATA_DIR
+      - BEE_DB_CAPACITY
+      - BEE_DEBUG_API_ADDR
+      - BEE_DEBUG_API_ENABLE
+      - BEE_GATEWAY_MODE
+      - BEE_GLOBAL_PINNING_ENABLE
+      - BEE_NAT_ADDR
+      - BEE_NETWORK_ID
+      - BEE_P2P_ADDR
+      - BEE_P2P_QUIC_ENABLE
+      - BEE_P2P_WS_ENABLE
+      - BEE_PASSWORD
+      - BEE_PASSWORD_FILE
+      - BEE_PAYMENT_EARLY
+      - BEE_PAYMENT_THRESHOLD
+      - BEE_PAYMENT_TOLERANCE
+      - BEE_RESOLVER_OPTIONS
+      - BEE_STANDALONE
+      - BEE_SWAP_ENABLE
+      - BEE_SWAP_ENDPOINT
+      - BEE_SWAP_FACTORY_ADDRESS
+      - BEE_SWAP_INITIAL_DEPOSIT
+      - BEE_TRACING_ENABLE
+      - BEE_TRACING_ENDPOINT
+      - BEE_TRACING_SERVICE_NAME
+      - BEE_VERBOSITY
+      - BEE_WELCOME_MESSAGE
+    ports:
+      - "13633:1633"
+      - "13634:1634"
+      - "127.0.0.1:13635:1635"
+    volumes:
+      - bee-13:/home/bee/.bee
+    command: start
+    depends_on:
+      - clef-13
+
+  bee-14:
+    image: ethersphere/bee:0.5.1
+    restart: unless-stopped
+    environment:
+      - BEE_API_ADDR
+      - BEE_BOOTNODE
+      - BEE_CLEF_SIGNER_ENABLE
+      - BEE_CLEF_SIGNER_ENDPOINT=http://clef-4:8550
+      - BEE_CONFIG
+      - BEE_CORS_ALLOWED_ORIGINS
+      - BEE_DATA_DIR
+      - BEE_DB_CAPACITY
+      - BEE_DEBUG_API_ADDR
+      - BEE_DEBUG_API_ENABLE
+      - BEE_GATEWAY_MODE
+      - BEE_GLOBAL_PINNING_ENABLE
+      - BEE_NAT_ADDR
+      - BEE_NETWORK_ID
+      - BEE_P2P_ADDR
+      - BEE_P2P_QUIC_ENABLE
+      - BEE_P2P_WS_ENABLE
+      - BEE_PASSWORD
+      - BEE_PASSWORD_FILE
+      - BEE_PAYMENT_EARLY
+      - BEE_PAYMENT_THRESHOLD
+      - BEE_PAYMENT_TOLERANCE
+      - BEE_RESOLVER_OPTIONS
+      - BEE_STANDALONE
+      - BEE_SWAP_ENABLE
+      - BEE_SWAP_ENDPOINT
+      - BEE_SWAP_FACTORY_ADDRESS
+      - BEE_SWAP_INITIAL_DEPOSIT
+      - BEE_TRACING_ENABLE
+      - BEE_TRACING_ENDPOINT
+      - BEE_TRACING_SERVICE_NAME
+      - BEE_VERBOSITY
+      - BEE_WELCOME_MESSAGE
+    ports:
+      - "14633:1633"
+      - "14634:1634"
+      - "127.0.0.1:14635:1635"
+    volumes:
+      - bee-14:/home/bee/.bee
+    command: start
+    depends_on:
+      - clef-14
+
+  bee-15:
+    image: ethersphere/bee:0.5.1
+    restart: unless-stopped
+    environment:
+      - BEE_API_ADDR
+      - BEE_BOOTNODE
+      - BEE_CLEF_SIGNER_ENABLE
+      - BEE_CLEF_SIGNER_ENDPOINT=http://clef-5:8550
+      - BEE_CONFIG
+      - BEE_CORS_ALLOWED_ORIGINS
+      - BEE_DATA_DIR
+      - BEE_DB_CAPACITY
+      - BEE_DEBUG_API_ADDR
+      - BEE_DEBUG_API_ENABLE
+      - BEE_GATEWAY_MODE
+      - BEE_GLOBAL_PINNING_ENABLE
+      - BEE_NAT_ADDR
+      - BEE_NETWORK_ID
+      - BEE_P2P_ADDR
+      - BEE_P2P_QUIC_ENABLE
+      - BEE_P2P_WS_ENABLE
+      - BEE_PASSWORD
+      - BEE_PASSWORD_FILE
+      - BEE_PAYMENT_EARLY
+      - BEE_PAYMENT_THRESHOLD
+      - BEE_PAYMENT_TOLERANCE
+      - BEE_RESOLVER_OPTIONS
+      - BEE_STANDALONE
+      - BEE_SWAP_ENABLE
+      - BEE_SWAP_ENDPOINT
+      - BEE_SWAP_FACTORY_ADDRESS
+      - BEE_SWAP_INITIAL_DEPOSIT
+      - BEE_TRACING_ENABLE
+      - BEE_TRACING_ENDPOINT
+      - BEE_TRACING_SERVICE_NAME
+      - BEE_VERBOSITY
+      - BEE_WELCOME_MESSAGE
+    ports:
+      - "15633:1633"
+      - "15634:1634"
+      - "127.0.0.1:15635:1635"
+    volumes:
+      - bee-15:/home/bee/.bee
+    command: start
+    depends_on:
+      - clef-15
+
+  bee-16:
+    image: ethersphere/bee:0.5.1
+    restart: unless-stopped
+    environment:
+      - BEE_API_ADDR
+      - BEE_BOOTNODE
+      - BEE_CLEF_SIGNER_ENABLE
+      - BEE_CLEF_SIGNER_ENDPOINT=http://clef-6:8550
+      - BEE_CONFIG
+      - BEE_CORS_ALLOWED_ORIGINS
+      - BEE_DATA_DIR
+      - BEE_DB_CAPACITY
+      - BEE_DEBUG_API_ADDR
+      - BEE_DEBUG_API_ENABLE
+      - BEE_GATEWAY_MODE
+      - BEE_GLOBAL_PINNING_ENABLE
+      - BEE_NAT_ADDR
+      - BEE_NETWORK_ID
+      - BEE_P2P_ADDR
+      - BEE_P2P_QUIC_ENABLE
+      - BEE_P2P_WS_ENABLE
+      - BEE_PASSWORD
+      - BEE_PASSWORD_FILE
+      - BEE_PAYMENT_EARLY
+      - BEE_PAYMENT_THRESHOLD
+      - BEE_PAYMENT_TOLERANCE
+      - BEE_RESOLVER_OPTIONS
+      - BEE_STANDALONE
+      - BEE_SWAP_ENABLE
+      - BEE_SWAP_ENDPOINT
+      - BEE_SWAP_FACTORY_ADDRESS
+      - BEE_SWAP_INITIAL_DEPOSIT
+      - BEE_TRACING_ENABLE
+      - BEE_TRACING_ENDPOINT
+      - BEE_TRACING_SERVICE_NAME
+      - BEE_VERBOSITY
+      - BEE_WELCOME_MESSAGE
+    ports:
+      - "16633:1633"
+      - "16634:1634"
+      - "127.0.0.1:16635:1635"
+    volumes:
+      - bee-16:/home/bee/.bee
+    command: start
+    depends_on:
+      - clef-16
+      
+  bee-17:
+    image: ethersphere/bee:0.5.1
+    restart: unless-stopped
+    environment:
+      - BEE_API_ADDR
+      - BEE_BOOTNODE
+      - BEE_CLEF_SIGNER_ENABLE
+      - BEE_CLEF_SIGNER_ENDPOINT=http://clef-2:8550
+      - BEE_CONFIG
+      - BEE_CORS_ALLOWED_ORIGINS
+      - BEE_DATA_DIR
+      - BEE_DB_CAPACITY
+      - BEE_DEBUG_API_ADDR
+      - BEE_DEBUG_API_ENABLE
+      - BEE_GATEWAY_MODE
+      - BEE_GLOBAL_PINNING_ENABLE
+      - BEE_NAT_ADDR
+      - BEE_NETWORK_ID
+      - BEE_P2P_ADDR
+      - BEE_P2P_QUIC_ENABLE
+      - BEE_P2P_WS_ENABLE
+      - BEE_PASSWORD
+      - BEE_PASSWORD_FILE
+      - BEE_PAYMENT_EARLY
+      - BEE_PAYMENT_THRESHOLD
+      - BEE_PAYMENT_TOLERANCE
+      - BEE_RESOLVER_OPTIONS
+      - BEE_STANDALONE
+      - BEE_SWAP_ENABLE
+      - BEE_SWAP_ENDPOINT
+      - BEE_SWAP_FACTORY_ADDRESS
+      - BEE_SWAP_INITIAL_DEPOSIT
+      - BEE_TRACING_ENABLE
+      - BEE_TRACING_ENDPOINT
+      - BEE_TRACING_SERVICE_NAME
+      - BEE_VERBOSITY
+      - BEE_WELCOME_MESSAGE
+    ports:
+      - "17633:1633"
+      - "17634:1634"
+      - "127.0.0.1:17635:1635"
+    volumes:
+      - bee-17:/home/bee/.bee
+    command: start
+    depends_on:
+      - clef-17
+
+  bee-18:
+    image: ethersphere/bee:0.5.1
+    restart: unless-stopped
+    environment:
+      - BEE_API_ADDR
+      - BEE_BOOTNODE
+      - BEE_CLEF_SIGNER_ENABLE
+      - BEE_CLEF_SIGNER_ENDPOINT=http://clef-3:8550
+      - BEE_CONFIG
+      - BEE_CORS_ALLOWED_ORIGINS
+      - BEE_DATA_DIR
+      - BEE_DB_CAPACITY
+      - BEE_DEBUG_API_ADDR
+      - BEE_DEBUG_API_ENABLE
+      - BEE_GATEWAY_MODE
+      - BEE_GLOBAL_PINNING_ENABLE
+      - BEE_NAT_ADDR
+      - BEE_NETWORK_ID
+      - BEE_P2P_ADDR
+      - BEE_P2P_QUIC_ENABLE
+      - BEE_P2P_WS_ENABLE
+      - BEE_PASSWORD
+      - BEE_PASSWORD_FILE
+      - BEE_PAYMENT_EARLY
+      - BEE_PAYMENT_THRESHOLD
+      - BEE_PAYMENT_TOLERANCE
+      - BEE_RESOLVER_OPTIONS
+      - BEE_STANDALONE
+      - BEE_SWAP_ENABLE
+      - BEE_SWAP_ENDPOINT
+      - BEE_SWAP_FACTORY_ADDRESS
+      - BEE_SWAP_INITIAL_DEPOSIT
+      - BEE_TRACING_ENABLE
+      - BEE_TRACING_ENDPOINT
+      - BEE_TRACING_SERVICE_NAME
+      - BEE_VERBOSITY
+      - BEE_WELCOME_MESSAGE
+    ports:
+      - "18633:1633"
+      - "18634:1634"
+      - "127.0.0.1:18635:1635"
+    volumes:
+      - bee-18:/home/bee/.bee
+    command: start
+    depends_on:
+      - clef-18
+
+  bee-19:
+    image: ethersphere/bee:0.5.1
+    restart: unless-stopped
+    environment:
+      - BEE_API_ADDR
+      - BEE_BOOTNODE
+      - BEE_CLEF_SIGNER_ENABLE
+      - BEE_CLEF_SIGNER_ENDPOINT=http://clef-4:8550
+      - BEE_CONFIG
+      - BEE_CORS_ALLOWED_ORIGINS
+      - BEE_DATA_DIR
+      - BEE_DB_CAPACITY
+      - BEE_DEBUG_API_ADDR
+      - BEE_DEBUG_API_ENABLE
+      - BEE_GATEWAY_MODE
+      - BEE_GLOBAL_PINNING_ENABLE
+      - BEE_NAT_ADDR
+      - BEE_NETWORK_ID
+      - BEE_P2P_ADDR
+      - BEE_P2P_QUIC_ENABLE
+      - BEE_P2P_WS_ENABLE
+      - BEE_PASSWORD
+      - BEE_PASSWORD_FILE
+      - BEE_PAYMENT_EARLY
+      - BEE_PAYMENT_THRESHOLD
+      - BEE_PAYMENT_TOLERANCE
+      - BEE_RESOLVER_OPTIONS
+      - BEE_STANDALONE
+      - BEE_SWAP_ENABLE
+      - BEE_SWAP_ENDPOINT
+      - BEE_SWAP_FACTORY_ADDRESS
+      - BEE_SWAP_INITIAL_DEPOSIT
+      - BEE_TRACING_ENABLE
+      - BEE_TRACING_ENDPOINT
+      - BEE_TRACING_SERVICE_NAME
+      - BEE_VERBOSITY
+      - BEE_WELCOME_MESSAGE
+    ports:
+      - "19633:1633"
+      - "19634:1634"
+      - "127.0.0.1:19635:1635"
+    volumes:
+      - bee-19:/home/bee/.bee
+    command: start
+    depends_on:
+      - clef-19
+
+  bee-20:
+    image: ethersphere/bee:0.5.1
+    restart: unless-stopped
+    environment:
+      - BEE_API_ADDR
+      - BEE_BOOTNODE
+      - BEE_CLEF_SIGNER_ENABLE
+      - BEE_CLEF_SIGNER_ENDPOINT=http://clef-5:8550
+      - BEE_CONFIG
+      - BEE_CORS_ALLOWED_ORIGINS
+      - BEE_DATA_DIR
+      - BEE_DB_CAPACITY
+      - BEE_DEBUG_API_ADDR
+      - BEE_DEBUG_API_ENABLE
+      - BEE_GATEWAY_MODE
+      - BEE_GLOBAL_PINNING_ENABLE
+      - BEE_NAT_ADDR
+      - BEE_NETWORK_ID
+      - BEE_P2P_ADDR
+      - BEE_P2P_QUIC_ENABLE
+      - BEE_P2P_WS_ENABLE
+      - BEE_PASSWORD
+      - BEE_PASSWORD_FILE
+      - BEE_PAYMENT_EARLY
+      - BEE_PAYMENT_THRESHOLD
+      - BEE_PAYMENT_TOLERANCE
+      - BEE_RESOLVER_OPTIONS
+      - BEE_STANDALONE
+      - BEE_SWAP_ENABLE
+      - BEE_SWAP_ENDPOINT
+      - BEE_SWAP_FACTORY_ADDRESS
+      - BEE_SWAP_INITIAL_DEPOSIT
+      - BEE_TRACING_ENABLE
+      - BEE_TRACING_ENDPOINT
+      - BEE_TRACING_SERVICE_NAME
+      - BEE_VERBOSITY
+      - BEE_WELCOME_MESSAGE
+    ports:
+      - "20633:1633"
+      - "20634:1634"
+      - "127.0.0.1:20635:1635"
+    volumes:
+      - bee-20:/home/bee/.bee
+    command: start
+    depends_on:
+      - clef-20
+
+
+
+
 
  
   
@@ -348,9 +1138,37 @@ volumes:
   clef-4:
   clef-5:
   clef-6:
+  clef-7:
+  clef-8:
+  clef-9:
+  clef-10:
+  clef-11:
+  clef-12:
+  clef-13:
+  clef-14:
+  clef-15:
+  clef-16:
+  clef-17:
+  clef-18:
+  clef-19:
+  clef-20:
   bee-1:
   bee-2:
   bee-3:
   bee-4:
   bee-5:
   bee-6:
+  bee-7:
+  bee-8:
+  bee-9:
+  bee-10:
+  bee-11:
+  bee-12:
+  bee-13:
+  bee-14:
+  bee-15:
+  bee-16:
+  bee-17:
+  bee-18:
+  bee-19:
+  bee-20:
