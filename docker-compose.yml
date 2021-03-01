@@ -1,6 +1,26 @@
 version: "3"
 services:
+
+
+  clef-0:
+    image: ethersphere/clef:0.4.7
+    restart: unless-stopped
+    environment:
+      - CLEF_CHAINID
+    volumes:
+      - clef-0:/app/data
+    command: full
+
   clef-1:
+    image: ethersphere/clef:0.4.7
+    restart: unless-stopped
+    environment:
+      - CLEF_CHAINID
+    volumes:
+      - clef-2:/app/data
+    command: full
+  
+  clef-2:
     image: ethersphere/clef:0.4.7
     restart: unless-stopped
     environment:
@@ -8,8 +28,16 @@ services:
     volumes:
       - clef-1:/app/data
     command: full
-  
-  
+   
+  clef-3:
+    image: ethersphere/clef:0.4.7
+    restart: unless-stopped
+    environment:
+      - CLEF_CHAINID
+    volumes:
+      - clef-3:/app/data
+    command: full
+
 
 
 
@@ -20,7 +48,7 @@ services:
       - BEE_API_ADDR
       - BEE_BOOTNODE
       - BEE_CLEF_SIGNER_ENABLE
-      - BEE_CLEF_SIGNER_ENDPOINT=http://clef-1:8550
+      - BEE_CLEF_SIGNER_ENDPOINT=http://clef-0:8550
       - BEE_CONFIG
       - BEE_CORS_ALLOWED_ORIGINS
       - BEE_DATA_DIR
@@ -58,7 +86,7 @@ services:
       - bee-1:/home/bee/.bee
     command: start
     depends_on:
-      - clef-1
+      - clef-0
   
 
   bee-2:
@@ -68,7 +96,7 @@ services:
       - BEE_API_ADDR
       - BEE_BOOTNODE
       - BEE_CLEF_SIGNER_ENABLE
-      - BEE_CLEF_SIGNER_ENDPOINT=http://clef-1:8550
+      - BEE_CLEF_SIGNER_ENDPOINT=http://clef-0:8550
       - BEE_CONFIG
       - BEE_CORS_ALLOWED_ORIGINS
       - BEE_DATA_DIR
@@ -106,7 +134,7 @@ services:
       - bee-2:/home/bee/.bee
     command: start
     depends_on:
-      - clef-1
+      - clef-0
 
   bee-3:
     image: ethersphere/bee:0.5.1
@@ -115,7 +143,7 @@ services:
       - BEE_API_ADDR
       - BEE_BOOTNODE
       - BEE_CLEF_SIGNER_ENABLE
-      - BEE_CLEF_SIGNER_ENDPOINT=http://clef-1:8550
+      - BEE_CLEF_SIGNER_ENDPOINT=http://clef-0:8550
       - BEE_CONFIG
       - BEE_CORS_ALLOWED_ORIGINS
       - BEE_DATA_DIR
@@ -153,7 +181,7 @@ services:
       - bee-3:/home/bee/.bee
     command: start
     depends_on:
-      - clef-1
+      - clef-0
 
   bee-4:
     image: ethersphere/bee:0.5.1
@@ -162,7 +190,7 @@ services:
       - BEE_API_ADDR
       - BEE_BOOTNODE
       - BEE_CLEF_SIGNER_ENABLE
-      - BEE_CLEF_SIGNER_ENDPOINT=http://clef-1:8550
+      - BEE_CLEF_SIGNER_ENDPOINT=http://clef-0:8550
       - BEE_CONFIG
       - BEE_CORS_ALLOWED_ORIGINS
       - BEE_DATA_DIR
@@ -200,7 +228,7 @@ services:
       - bee-4:/home/bee/.bee
     command: start
     depends_on:
-      - clef-1
+      - clef-0
 
   bee-5:
     image: ethersphere/bee:0.5.1
@@ -209,7 +237,7 @@ services:
       - BEE_API_ADDR
       - BEE_BOOTNODE
       - BEE_CLEF_SIGNER_ENABLE
-      - BEE_CLEF_SIGNER_ENDPOINT=http://clef-1:8550
+      - BEE_CLEF_SIGNER_ENDPOINT=http://clef-0:8550
       - BEE_CONFIG
       - BEE_CORS_ALLOWED_ORIGINS
       - BEE_DATA_DIR
@@ -247,7 +275,7 @@ services:
       - bee-5:/home/bee/.bee
     command: start
     depends_on:
-      - clef-1
+      - clef-0
 
   bee-6:
     image: ethersphere/bee:0.5.1
@@ -256,7 +284,7 @@ services:
       - BEE_API_ADDR
       - BEE_BOOTNODE
       - BEE_CLEF_SIGNER_ENABLE
-      - BEE_CLEF_SIGNER_ENDPOINT=http://clef-1:8550
+      - BEE_CLEF_SIGNER_ENDPOINT=http://clef-0:8550
       - BEE_CONFIG
       - BEE_CORS_ALLOWED_ORIGINS
       - BEE_DATA_DIR
@@ -294,7 +322,7 @@ services:
       - bee-6:/home/bee/.bee
     command: start
     depends_on:
-      - clef-1
+      - clef-0
       
   bee-7:
     image: ethersphere/bee:0.5.1
@@ -303,7 +331,7 @@ services:
       - BEE_API_ADDR
       - BEE_BOOTNODE
       - BEE_CLEF_SIGNER_ENABLE
-      - BEE_CLEF_SIGNER_ENDPOINT=http://clef-1:8550
+      - BEE_CLEF_SIGNER_ENDPOINT=http://clef-0:8550
       - BEE_CONFIG
       - BEE_CORS_ALLOWED_ORIGINS
       - BEE_DATA_DIR
@@ -341,7 +369,7 @@ services:
       - bee-7:/home/bee/.bee
     command: start
     depends_on:
-      - clef-1
+      - clef-0
 
   bee-8:
     image: ethersphere/bee:0.5.1
@@ -350,7 +378,7 @@ services:
       - BEE_API_ADDR
       - BEE_BOOTNODE
       - BEE_CLEF_SIGNER_ENABLE
-      - BEE_CLEF_SIGNER_ENDPOINT=http://clef-1:8550
+      - BEE_CLEF_SIGNER_ENDPOINT=http://clef-0:8550
       - BEE_CONFIG
       - BEE_CORS_ALLOWED_ORIGINS
       - BEE_DATA_DIR
@@ -388,7 +416,7 @@ services:
       - bee-8:/home/bee/.bee
     command: start
     depends_on:
-      - clef-1
+      - clef-0
 
   bee-9:
     image: ethersphere/bee:0.5.1
@@ -397,7 +425,7 @@ services:
       - BEE_API_ADDR
       - BEE_BOOTNODE
       - BEE_CLEF_SIGNER_ENABLE
-      - BEE_CLEF_SIGNER_ENDPOINT=http://clef-1:8550
+      - BEE_CLEF_SIGNER_ENDPOINT=http://clef-0:8550
       - BEE_CONFIG
       - BEE_CORS_ALLOWED_ORIGINS
       - BEE_DATA_DIR
@@ -435,7 +463,7 @@ services:
       - bee-9:/home/bee/.bee
     command: start
     depends_on:
-      - clef-1
+      - clef-0
 
   bee-10:
     image: ethersphere/bee:0.5.1
@@ -915,7 +943,7 @@ services:
       - BEE_API_ADDR
       - BEE_BOOTNODE
       - BEE_CLEF_SIGNER_ENABLE
-      - BEE_CLEF_SIGNER_ENDPOINT=http://clef-1:8550
+      - BEE_CLEF_SIGNER_ENDPOINT=http://clef-2:8550
       - BEE_CONFIG
       - BEE_CORS_ALLOWED_ORIGINS
       - BEE_DATA_DIR
@@ -953,7 +981,7 @@ services:
       - bee-20:/home/bee/.bee
     command: start
     depends_on:
-      - clef-1
+      - clef-2
       
  
   bee-21:
@@ -963,7 +991,7 @@ services:
       - BEE_API_ADDR
       - BEE_BOOTNODE
       - BEE_CLEF_SIGNER_ENABLE
-      - BEE_CLEF_SIGNER_ENDPOINT=http://clef-1:8550
+      - BEE_CLEF_SIGNER_ENDPOINT=http://clef-2:8550
       - BEE_CONFIG
       - BEE_CORS_ALLOWED_ORIGINS
       - BEE_DATA_DIR
@@ -1001,7 +1029,7 @@ services:
       - bee-21:/home/bee/.bee
     command: start
     depends_on:
-      - clef-1
+      - clef-2
   
 
   bee-22:
@@ -1011,7 +1039,7 @@ services:
       - BEE_API_ADDR
       - BEE_BOOTNODE
       - BEE_CLEF_SIGNER_ENABLE
-      - BEE_CLEF_SIGNER_ENDPOINT=http://clef-1:8550
+      - BEE_CLEF_SIGNER_ENDPOINT=http://clef-2:8550
       - BEE_CONFIG
       - BEE_CORS_ALLOWED_ORIGINS
       - BEE_DATA_DIR
@@ -1049,7 +1077,7 @@ services:
       - bee-22:/home/bee/.bee
     command: start
     depends_on:
-      - clef-1
+      - clef-2
 
   bee-23:
     image: ethersphere/bee:0.5.1
@@ -1058,7 +1086,7 @@ services:
       - BEE_API_ADDR
       - BEE_BOOTNODE
       - BEE_CLEF_SIGNER_ENABLE
-      - BEE_CLEF_SIGNER_ENDPOINT=http://clef-1:8550
+      - BEE_CLEF_SIGNER_ENDPOINT=http://clef-2:8550
       - BEE_CONFIG
       - BEE_CORS_ALLOWED_ORIGINS
       - BEE_DATA_DIR
@@ -1096,7 +1124,7 @@ services:
       - bee-23:/home/bee/.bee
     command: start
     depends_on:
-      - clef-1
+      - clef-2
 
   bee-24:
     image: ethersphere/bee:0.5.1
@@ -1105,7 +1133,7 @@ services:
       - BEE_API_ADDR
       - BEE_BOOTNODE
       - BEE_CLEF_SIGNER_ENABLE
-      - BEE_CLEF_SIGNER_ENDPOINT=http://clef-1:8550
+      - BEE_CLEF_SIGNER_ENDPOINT=http://clef-2:8550
       - BEE_CONFIG
       - BEE_CORS_ALLOWED_ORIGINS
       - BEE_DATA_DIR
@@ -1143,7 +1171,7 @@ services:
       - bee-24:/home/bee/.bee
     command: start
     depends_on:
-      - clef-1
+      - clef-2
 
   bee-25:
     image: ethersphere/bee:0.5.1
@@ -1152,7 +1180,7 @@ services:
       - BEE_API_ADDR
       - BEE_BOOTNODE
       - BEE_CLEF_SIGNER_ENABLE
-      - BEE_CLEF_SIGNER_ENDPOINT=http://clef-1:8550
+      - BEE_CLEF_SIGNER_ENDPOINT=http://clef-2:8550
       - BEE_CONFIG
       - BEE_CORS_ALLOWED_ORIGINS
       - BEE_DATA_DIR
@@ -1190,7 +1218,7 @@ services:
       - bee-25:/home/bee/.bee
     command: start
     depends_on:
-      - clef-1
+      - clef-2
 
   bee-26:
     image: ethersphere/bee:0.5.1
@@ -1199,7 +1227,7 @@ services:
       - BEE_API_ADDR
       - BEE_BOOTNODE
       - BEE_CLEF_SIGNER_ENABLE
-      - BEE_CLEF_SIGNER_ENDPOINT=http://clef-1:8550
+      - BEE_CLEF_SIGNER_ENDPOINT=http://clef-2:8550
       - BEE_CONFIG
       - BEE_CORS_ALLOWED_ORIGINS
       - BEE_DATA_DIR
@@ -1237,7 +1265,7 @@ services:
       - bee-26:/home/bee/.bee
     command: start
     depends_on:
-      - clef-1
+      - clef-2
       
   bee-27:
     image: ethersphere/bee:0.5.1
@@ -1246,7 +1274,7 @@ services:
       - BEE_API_ADDR
       - BEE_BOOTNODE
       - BEE_CLEF_SIGNER_ENABLE
-      - BEE_CLEF_SIGNER_ENDPOINT=http://clef-1:8550
+      - BEE_CLEF_SIGNER_ENDPOINT=http://clef-2:8550
       - BEE_CONFIG
       - BEE_CORS_ALLOWED_ORIGINS
       - BEE_DATA_DIR
@@ -1284,7 +1312,7 @@ services:
       - bee-27:/home/bee/.bee
     command: start
     depends_on:
-      - clef-1
+      - clef-2
 
   bee-28:
     image: ethersphere/bee:0.5.1
@@ -1293,7 +1321,7 @@ services:
       - BEE_API_ADDR
       - BEE_BOOTNODE
       - BEE_CLEF_SIGNER_ENABLE
-      - BEE_CLEF_SIGNER_ENDPOINT=http://clef-1:8550
+      - BEE_CLEF_SIGNER_ENDPOINT=http://clef-2:8550
       - BEE_CONFIG
       - BEE_CORS_ALLOWED_ORIGINS
       - BEE_DATA_DIR
@@ -1331,7 +1359,7 @@ services:
       - bee-28:/home/bee/.bee
     command: start
     depends_on:
-      - clef-1
+      - clef-2
 
   bee-29:
     image: ethersphere/bee:0.5.1
@@ -1340,7 +1368,7 @@ services:
       - BEE_API_ADDR
       - BEE_BOOTNODE
       - BEE_CLEF_SIGNER_ENABLE
-      - BEE_CLEF_SIGNER_ENDPOINT=http://clef-1:8550
+      - BEE_CLEF_SIGNER_ENDPOINT=http://clef-2:8550
       - BEE_CONFIG
       - BEE_CORS_ALLOWED_ORIGINS
       - BEE_DATA_DIR
@@ -1378,7 +1406,7 @@ services:
       - bee-29:/home/bee/.bee
     command: start
     depends_on:
-      - clef-1
+      - clef-2
 
   bee-30:
     image: ethersphere/bee:0.5.1
@@ -1387,7 +1415,7 @@ services:
       - BEE_API_ADDR
       - BEE_BOOTNODE
       - BEE_CLEF_SIGNER_ENABLE
-      - BEE_CLEF_SIGNER_ENDPOINT=http://clef-1:8550
+      - BEE_CLEF_SIGNER_ENDPOINT=http://clef-3:8550
       - BEE_CONFIG
       - BEE_CORS_ALLOWED_ORIGINS
       - BEE_DATA_DIR
@@ -1425,7 +1453,7 @@ services:
       - bee-30:/home/bee/.bee
     command: start
     depends_on:
-      - clef-1
+      - clef-3
 
 
   bee-31:
@@ -1435,7 +1463,7 @@ services:
       - BEE_API_ADDR
       - BEE_BOOTNODE
       - BEE_CLEF_SIGNER_ENABLE
-      - BEE_CLEF_SIGNER_ENDPOINT=http://clef-1:8550
+      - BEE_CLEF_SIGNER_ENDPOINT=http://clef-3:8550
       - BEE_CONFIG
       - BEE_CORS_ALLOWED_ORIGINS
       - BEE_DATA_DIR
@@ -1473,7 +1501,7 @@ services:
       - bee-31:/home/bee/.bee
     command: start
     depends_on:
-      - clef-1
+      - clef-3
   
 
   bee-32:
@@ -1483,7 +1511,7 @@ services:
       - BEE_API_ADDR
       - BEE_BOOTNODE
       - BEE_CLEF_SIGNER_ENABLE
-      - BEE_CLEF_SIGNER_ENDPOINT=http://clef-1:8550
+      - BEE_CLEF_SIGNER_ENDPOINT=http://clef-3:8550
       - BEE_CONFIG
       - BEE_CORS_ALLOWED_ORIGINS
       - BEE_DATA_DIR
@@ -1521,7 +1549,7 @@ services:
       - bee-32:/home/bee/.bee
     command: start
     depends_on:
-      - clef-1
+      - clef-3
 
   bee-33:
     image: ethersphere/bee:0.5.1
@@ -1530,7 +1558,7 @@ services:
       - BEE_API_ADDR
       - BEE_BOOTNODE
       - BEE_CLEF_SIGNER_ENABLE
-      - BEE_CLEF_SIGNER_ENDPOINT=http://clef-1:8550
+      - BEE_CLEF_SIGNER_ENDPOINT=http://clef-3:8550
       - BEE_CONFIG
       - BEE_CORS_ALLOWED_ORIGINS
       - BEE_DATA_DIR
@@ -1568,7 +1596,7 @@ services:
       - bee-33:/home/bee/.bee
     command: start
     depends_on:
-      - clef-1
+      - clef-3
 
   bee-34:
     image: ethersphere/bee:0.5.1
@@ -1577,7 +1605,7 @@ services:
       - BEE_API_ADDR
       - BEE_BOOTNODE
       - BEE_CLEF_SIGNER_ENABLE
-      - BEE_CLEF_SIGNER_ENDPOINT=http://clef-1:8550
+      - BEE_CLEF_SIGNER_ENDPOINT=http://clef-3:8550
       - BEE_CONFIG
       - BEE_CORS_ALLOWED_ORIGINS
       - BEE_DATA_DIR
@@ -1615,7 +1643,7 @@ services:
       - bee-34:/home/bee/.bee
     command: start
     depends_on:
-      - clef-1
+      - clef-3
 
   bee-35:
     image: ethersphere/bee:0.5.1
@@ -1624,7 +1652,7 @@ services:
       - BEE_API_ADDR
       - BEE_BOOTNODE
       - BEE_CLEF_SIGNER_ENABLE
-      - BEE_CLEF_SIGNER_ENDPOINT=http://clef-1:8550
+      - BEE_CLEF_SIGNER_ENDPOINT=http://clef-3:8550
       - BEE_CONFIG
       - BEE_CORS_ALLOWED_ORIGINS
       - BEE_DATA_DIR
@@ -1662,7 +1690,7 @@ services:
       - bee-35:/home/bee/.bee
     command: start
     depends_on:
-      - clef-1
+      - clef-3
 
   bee-36:
     image: ethersphere/bee:0.5.1
@@ -1671,7 +1699,7 @@ services:
       - BEE_API_ADDR
       - BEE_BOOTNODE
       - BEE_CLEF_SIGNER_ENABLE
-      - BEE_CLEF_SIGNER_ENDPOINT=http://clef-1:8550
+      - BEE_CLEF_SIGNER_ENDPOINT=http://clef-3:8550
       - BEE_CONFIG
       - BEE_CORS_ALLOWED_ORIGINS
       - BEE_DATA_DIR
@@ -1709,7 +1737,7 @@ services:
       - bee-36:/home/bee/.bee
     command: start
     depends_on:
-      - clef-1
+      - clef-3
       
   bee-37:
     image: ethersphere/bee:0.5.1
@@ -1718,7 +1746,7 @@ services:
       - BEE_API_ADDR
       - BEE_BOOTNODE
       - BEE_CLEF_SIGNER_ENABLE
-      - BEE_CLEF_SIGNER_ENDPOINT=http://clef-1:8550
+      - BEE_CLEF_SIGNER_ENDPOINT=http://clef-3:8550
       - BEE_CONFIG
       - BEE_CORS_ALLOWED_ORIGINS
       - BEE_DATA_DIR
@@ -1756,7 +1784,7 @@ services:
       - bee-37:/home/bee/.bee
     command: start
     depends_on:
-      - clef-1
+      - clef-3
 
   bee-38:
     image: ethersphere/bee:0.5.1
@@ -1765,7 +1793,7 @@ services:
       - BEE_API_ADDR
       - BEE_BOOTNODE
       - BEE_CLEF_SIGNER_ENABLE
-      - BEE_CLEF_SIGNER_ENDPOINT=http://clef-1:8550
+      - BEE_CLEF_SIGNER_ENDPOINT=http://clef-3:8550
       - BEE_CONFIG
       - BEE_CORS_ALLOWED_ORIGINS
       - BEE_DATA_DIR
@@ -1803,7 +1831,7 @@ services:
       - bee-38:/home/bee/.bee
     command: start
     depends_on:
-      - clef-1
+      - clef-3
 
   bee-39:
     image: ethersphere/bee:0.5.1
@@ -1812,7 +1840,7 @@ services:
       - BEE_API_ADDR
       - BEE_BOOTNODE
       - BEE_CLEF_SIGNER_ENABLE
-      - BEE_CLEF_SIGNER_ENDPOINT=http://clef-1:8550
+      - BEE_CLEF_SIGNER_ENDPOINT=http://clef-3:8550
       - BEE_CONFIG
       - BEE_CORS_ALLOWED_ORIGINS
       - BEE_DATA_DIR
@@ -1850,14 +1878,18 @@ services:
       - bee-39:/home/bee/.bee
     command: start
     depends_on:
-      - clef-1
+      - clef-3
 
 
  
   
 
 volumes:
+  clef-0:
   clef-1:
+  clef-2:
+  clef-3:
+  clef-4:
   bee-1:
   bee-2:
   bee-3:
