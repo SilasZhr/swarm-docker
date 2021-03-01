@@ -1514,9 +1514,9 @@ services:
       - BEE_VERBOSITY
       - BEE_WELCOME_MESSAGE
     ports:
-      - "33633:1633"
-      - "33634:1634"
-      - "127.0.0.1:33635:1635"
+      - "32633:1633"
+      - "32634:1634"
+      - "127.0.0.1:32635:1635"
     volumes:
       - bee-32:/home/bee/.bee
     command: start
